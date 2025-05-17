@@ -1,8 +1,19 @@
 @import url(normalize.css);
 
 :root {
-  --main-bg-color: rgb(252, 244, 230);
+  --main-bg-color: rgb(255, 255, 255);
+  --calculator-bg-color: rgb(60, 14, 61);
+
+  --buttons-bg-color: rgb(254, 247, 222);
+  --btn-oper-bg-color: rgb(180, 151, 214);
+  --btn-fun-bg-color: rgb(216, 204, 227);
+
+  --btn-hover-color: rgb(193, 193, 193);
+
   --black-text-color: rgb(0, 0, 0);
+  --white-text-color: rgb(255, 255, 255);
+  --dark-text-color: rgb(46, 12, 48);
+  --light-text-color: rgb(245, 213, 252);
 }
 
 body {
@@ -17,5 +28,64 @@ body {
 }
 
 .title {
+  color: var(--dark-text-color);
+  font-size: 40px;
+}
+
+.calculator {
+  background-color: var(--calculator-bg-color);
+  padding: 15px;
+  max-width: 360px;
+  border-radius: 15px;
+}
+
+.display {
+  background-color: inherit;
+  color: var(--light-text-color);
+  text-align: right;
+  font-size: 50px;
+  border: none;
+  outline: none;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.buttonsBox {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.btn {
+  padding: 10px;
+  font-size: 35px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
   color: var(--black-text-color);
+  background-color: var(--buttons-bg-color);
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: var(--btn-hover-color);
+}
+
+.btn:active {
+  opacity: 90%;
+}
+
+.operator {
+  background-color: var(--btn-oper-bg-color);
+  font-weight: 600;
+}
+
+.function {
+  background-color: var(--btn-fun-bg-color);
+  font-weight: 600;
+}
+
+.zero {
+  grid-column: span 2;
 }
