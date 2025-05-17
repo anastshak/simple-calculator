@@ -1,5 +1,21 @@
 @import url(normalize.css);
 
+:root {
+  --main-bg-color: rgb(252, 244, 230);
+  --black-text-color: rgb(0, 0, 0);
+}
+
 body {
-  background-color: blanchedalmond;
+  background-color: var(--main-bg-color);
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  color: var(--black-text-color);
 }
