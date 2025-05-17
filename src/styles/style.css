@@ -13,11 +13,12 @@
   --black-text-color: rgb(0, 0, 0);
   --white-text-color: rgb(255, 255, 255);
   --dark-text-color: rgb(46, 12, 48);
-  --light-text-color: rgb(245, 213, 252);
+  --light-text-color: rgb(249, 224, 255);
 }
 
 body {
   background-color: var(--main-bg-color);
+  font-family: monospace;
 }
 
 #root {
