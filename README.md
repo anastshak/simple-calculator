@@ -1,3 +1,3 @@
 # simple-calculator
 
-Innowise Lab Internship: Simple calculator
+Innowise Lab Internship: Level 0: Simple calculator
