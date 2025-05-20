@@ -1,5 +1,6 @@
 import { buttonValues, operatorValues, functionValues } from '../constants/constants';
 import onButtonClick from '../handlers/onButtonClick';
+import createThemeToggle from './theme-switch';
 
 export default function createCalculator() {
   const app = document.createElement('div');
@@ -10,6 +11,9 @@ export default function createCalculator() {
   title.className = 'title';
   title.textContent = 'simple calculator';
   app.appendChild(title);
+
+  const themeToggle = createThemeToggle();
+  app.appendChild(themeToggle);
 
   const calculator = document.createElement('main');
   calculator.className = 'calculator';
