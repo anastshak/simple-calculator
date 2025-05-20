@@ -51,6 +51,14 @@ body {
   box-sizing: border-box;
 }
 
+.extraDisplay {
+  color: var(--light-text-color);
+  font-size: 16px;
+  text-align: right;
+  margin-bottom: 5px;
+  min-height: 16px;
+}
+
 .buttonsBox {
   display: grid;
   grid-template-columns: repeat(4, 1fr);

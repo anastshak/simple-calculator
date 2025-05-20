@@ -25,6 +25,11 @@ const calculator = document.createElement('main');
 calculator.className = 'calculator';
 app.appendChild(calculator);
 
+const extraDisplay = document.createElement('div');
+extraDisplay.className = 'extraDisplay';
+extraDisplay.textContent = '';
+calculator.appendChild(extraDisplay);
+
 const display = document.createElement('input');
 display.className = 'display';
 display.readOnly = true;
@@ -92,6 +97,7 @@ function handleOperator(value) {
       B = display.value;
       const result = calculate(parseFloat(A), parseFloat(B), operator);
       display.value = result;
+      extraDisplay.textContent = `${A} ${operator} ${B} =`;
       clear();
     }
   } else {
@@ -105,6 +111,7 @@ function handleOperator(value) {
     }
 
     operator = value;
+    extraDisplay.textContent = `${A} ${operator}`;
     display.value = '';
   }
 }
@@ -113,6 +120,7 @@ function handleFunction(value) {
   if (value === 'AC') {
     clear();
     display.value = '';
+    extraDisplay.textContent = '';
   } else if (value === '+/-') {
     if (display.value && display.value !== '0') {
       display.value = display.value.startsWith('-') ? display.value.slice(1) : '-' + display.value;
