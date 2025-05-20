@@ -65,7 +65,6 @@ body {
   border-radius: 10px;
   cursor: pointer;
   color: var(--black-text-color);
-  background-color: var(--buttons-bg-color);
   transition: background-color 0.3s ease;
 }
 
@@ -75,6 +74,10 @@ body {
 
 .btn:active {
   opacity: 90%;
+}
+
+.number {
+  background-color: var(--buttons-bg-color);
 }
 
 .operator {
